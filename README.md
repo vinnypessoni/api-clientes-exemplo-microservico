@@ -2,6 +2,8 @@
 
 Essa é um exemplo de uma API simples para estudo tanto de programação quanto testes automatizdos.
 
+Usei Kotlin e Springboot para programar essa API.
+
 ### Requisitos
 
 Baixe e instale o [INTELIJ](https://www.jetbrains.com/idea/)
