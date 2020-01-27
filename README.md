@@ -1,11 +1,17 @@
-##### API Exemplo Cliente
+## API Exemplo Cliente
 
 Essa é um exemplo de uma API simples para estudo tanto de programação quanto testes automatizdos.
+
+### Requisitos
+
+Baixe e instale o [INTELIJ](https://www.jetbrains.com/idea/)
+
+Baixe e instale a JDK mais recente [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 
 ### Como rodar esse projeto 
 
-Após clonar o projeto do GIT, sugiro abri-lo no INTELIJ [https://www.jetbrains.com/idea/]
+Clone ou baixe o projeto.
 
 Navegue até a pasta com.viniciuspessoni e abra a classe Aplicacao.kt.
 
@@ -35,10 +41,16 @@ O corpo do método POST é um JSON e deve conter:
             { 
                 nome: "Vinny",
                 idade: 30, 
-                id: "esse é um id" 
+                id: "123456789" 
             }
 
 É possível baixar a coleção do POSTMAN que possui esses dois métodos do meu site:
-    https://www.viniciuspessoni.com/downloads
-    https://www.youtube.com/c/pessonizando
-    https://www.instagram.com/pessonizando/
+
+[viniciuspessoni.com -> meu site com vários materias]( https://www.viniciuspessoni.com/downloads)
+
+Também estou presente em:
+[YouTube]( https://www.youtube.com/c/pessonizando)
+
+[Instagram](https://www.instagram.com/pessonizando)
+
+[Telegram](https://t.me/pessonizando)
