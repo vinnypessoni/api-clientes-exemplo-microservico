@@ -48,13 +48,14 @@ O corpo do método POST é um JSON e deve conter:
                 id: "123456789" 
             }
 
-É possível baixar a coleção do POSTMAN que possui os requests (métodos HTTP)  que exercitam essa API a partir do meu site:
+Baixe a coleção do POSTMAN que possui os requests (métodos HTTP)  que exercitam essa API a partir do meu site:
 
-[viniciuspessoni.com -> meu site com vários materias]( https://www.viniciuspessoni.com/downloads)
+[viniciuspessoni.com/downloads]( https://www.viniciuspessoni.com/downloads)
 
-Também estou presente em:
-[YouTube]( https://www.youtube.com/c/pessonizando)
+Me Segue =}
 
-[Instagram](https://www.instagram.com/pessonizando)
+😍 [YouTube]( https://www.youtube.com/c/pessonizando) 
 
-[Telegram](https://t.me/pessonizando)
+💗 [Instagram](https://www.instagram.com/pessonizando)
+
+⭐ [Telegram](https://t.me/pessonizando)
