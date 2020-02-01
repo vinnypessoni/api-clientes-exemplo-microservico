@@ -1,9 +1,10 @@
 package com.viniciuspessoni.domain
 
-class Cliente (var nome: String, var idade: Int, var id: Int){
+class Cliente (var nome: String, var idade: Int, var id: Int, var risco: Int = 0){
 
     fun calcularRisco(): Int{
-        return 100 - idade * 5
+        risco = 110 - idade * 5
+        return risco
     }
 
     override fun toString(): String{
