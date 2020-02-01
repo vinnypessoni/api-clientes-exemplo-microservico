@@ -27,8 +27,10 @@ A aplicação será iniciada e um servidor estará rodando e acessivel no endere
 
 A API possui os métodos:
  
-    GET para pegar todos os clientes. 
-    POST para cadastrar um cliente novo. 
+    GET clientes para pegar todos os clientes. 
+    GET cliente por ID pegar todos os clientes. 
+    POST cliente para cadastrar um cliente novo. 
+    DELETE cliente por ID para deletar um cliente por ID. 
     
 Exemplo:
 
@@ -46,7 +48,7 @@ O corpo do método POST é um JSON e deve conter:
                 id: "123456789" 
             }
 
-É possível baixar a coleção do POSTMAN que possui esses dois métodos do meu site:
+É possível baixar a coleção do POSTMAN que possui os requests (métodos HTTP)  que exercitam essa API a partir do meu site:
 
 [viniciuspessoni.com -> meu site com vários materias]( https://www.viniciuspessoni.com/downloads)
 
