@@ -25,12 +25,12 @@ A aplicação será iniciada e um servidor estará rodando e acessivel no endere
 
 ### A API 
 
-A API possui os métodos:
+A API possui os endpoints:
  
-    GET clientes para pegar todos os clientes. 
-    GET cliente por ID pegar todos os clientes. 
-    POST cliente para cadastrar um cliente novo. 
-    DELETE cliente por ID para deletar um cliente por ID. 
+    / ou /clientes --> GET clientes: para pegar todos os clientes. 
+    /cliente/{ID}  --> GET cliente por ID: para pegar um cliente com base no seu id.
+    /cliente       --> POST cliente para cadastrar um cliente novo. 
+    /cliente       --> DELETE cliente por ID para deletar um cliente por ID. 
     
 Exemplo:
 
@@ -43,9 +43,9 @@ Para cadastrar um cliente, vá no POSTMAN e crie um método POST.
 O corpo do método POST é um JSON e deve conter:
             
             { 
-                nome: "Vinny",
-                idade: 30, 
-                id: "123456789" 
+                "nome": "Vinny",
+                "idade": 30, 
+                 "id": "123456789" 
             }
 
 Baixe a coleção do POSTMAN que possui os requests (métodos HTTP)  que exercitam essa API a partir do meu site:
