@@ -1,6 +1,7 @@
 package com.viniciuspessoni.controller
 
 import com.viniciuspessoni.domain.Cliente
+import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 import kotlin.collections.HashMap
@@ -14,6 +15,7 @@ class ClienteController(){
     fun getTodosClientes(): Map<Int, Cliente>{
         return listaClientes
     }
+
     @GetMapping("cliente/{id}")
     fun getClientePorId(@PathVariable @Valid id: Int): String{
         if(listaClientes.containsKey(id))
@@ -23,10 +25,22 @@ class ClienteController(){
     }
 
     @PostMapping (path = ["/cliente"], consumes = ["application/json"])
+    @ResponseStatus( HttpStatus.CREATED)
     fun cadastraCliente(@RequestBody @Valid cliente: Cliente): MutableMap<Int, Cliente>{
         listaClientes.put(cliente.id, cliente)
         System.out.println("CLIENTE ADD: $cliente")
         return listaClientes
+    }
+
+    @PutMapping (path = ["cliente"], consumes = ["application/json"])
+    fun atualizaCliente(@RequestBody cliente: Cliente): String{
+        if(listaClientes.containsKey(cliente.id)) {
+            listaClientes.put(cliente.id, cliente)
+            System.out.println("CLIENTE ATUALIZADO: $cliente")
+            return listaClientes.toString()
+        }
+        else
+            return "Cliente não encontrado"
     }
 
     @DeleteMapping("cliente/{id}")
@@ -40,5 +54,12 @@ class ClienteController(){
         else {
             return "Cliente não encontrado"
         }
+    }
+
+    @DeleteMapping("cliente/apagaTodos")
+    fun apagarTodosClientes(): String {
+        listaClientes.clear()
+        System.out.println("TODOS CLIENTES REMOVIDOS")
+        return listaClientes.toString()
     }
 }
