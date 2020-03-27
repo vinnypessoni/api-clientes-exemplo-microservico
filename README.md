@@ -30,6 +30,7 @@ A API possui os endpoints:
     / ou /clientes --> GET clientes: para pegar todos os clientes. 
     /cliente/{ID}  --> GET cliente por ID: para pegar um cliente com base no seu id.
     /cliente       --> POST cliente para cadastrar um cliente novo. 
+    /cliente       --> PUT atualiza cliente já cadastrado previamente. 
     /cliente       --> DELETE cliente por ID para deletar um cliente por ID. 
     
 Exemplo:
