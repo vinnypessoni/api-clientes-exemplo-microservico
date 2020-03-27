@@ -2,6 +2,9 @@ package com.viniciuspessoni.controller
 
 import com.viniciuspessoni.domain.Cliente
 import org.springframework.http.HttpStatus
+import org.springframework.http.HttpStatus.*
+import org.springframework.http.ResponseEntity
+import org.springframework.http.ResponseEntity.status
 import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 import kotlin.collections.HashMap
@@ -25,22 +28,24 @@ class ClienteController(){
     }
 
     @PostMapping (path = ["/cliente"], consumes = ["application/json"])
-    @ResponseStatus( HttpStatus.CREATED)
-    fun cadastraCliente(@RequestBody @Valid cliente: Cliente): MutableMap<Int, Cliente>{
+    fun cadastraCliente(@RequestBody @Valid cliente: Cliente): ResponseEntity<MutableMap<Int, Cliente>> {
         listaClientes.put(cliente.id, cliente)
         System.out.println("CLIENTE ADD: $cliente")
-        return listaClientes
+        return status(CREATED).body(listaClientes)
     }
 
     @PutMapping (path = ["cliente"], consumes = ["application/json"])
-    fun atualizaCliente(@RequestBody cliente: Cliente): String{
+    fun atualizaCliente(@RequestBody cliente: Cliente): ResponseEntity<Any> {
         if(listaClientes.containsKey(cliente.id)) {
             listaClientes.put(cliente.id, cliente)
+
             System.out.println("CLIENTE ATUALIZADO: $cliente")
-            return listaClientes.toString()
+            return status(OK).body(listaClientes)
         }
-        else
-            return "Cliente não encontrado"
+        else {
+            System.out.println("CLIENTE NÃO ENCONTRADO: $cliente")
+            return status(NOT_FOUND).body("Cliente não encontrado")
+        }
     }
 
     @DeleteMapping("cliente/{id}")
@@ -52,6 +57,7 @@ class ClienteController(){
             return "CLIENTE REMOVIDO: $clienteParaRemover"
         }
         else {
+            System.out.println("CLIENTE NÃO ENCONTRADO: $id")
             return "Cliente não encontrado"
         }
     }
