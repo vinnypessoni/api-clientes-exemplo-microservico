@@ -22,16 +22,21 @@ class ClienteController(){
     var listaClientes: MutableMap<Int, Cliente> = HashMap()
 
     @GetMapping("clientes", "/")
-    fun getTodosClientes(): Map<Int, Cliente>{
-        return listaClientes
+    fun getTodosClientes(): ResponseEntity<MutableMap<Int, Cliente>> {
+        System.out.println("PEGA TODOS CLIENTES")
+        return status(OK).body(listaClientes)
     }
 
     @GetMapping("cliente/{id}")
-    fun getClientePorId(@PathVariable @Valid id: Int): String{
-        if(listaClientes.containsKey(id))
-            return listaClientes[id].toString()
-        else
-            return "Cliente não encontrado"
+    fun getClientePorId(@PathVariable @Valid id: Int): ResponseEntity<Any> {
+        if(listaClientes.containsKey(id)) {
+            System.out.println("PEGA CLIENTE COM ID: $listaClientes[id]")
+            return status(OK).body(listaClientes[id])
+        }
+        else {
+            System.out.println("CLIENTE NÃO ENCONTRADO: $id")
+            return status(NOT_FOUND).body("Cliente não encontrado")
+        }
     }
 
     @PostMapping (path = ["/cliente"], consumes = ["application/json"])
@@ -56,19 +61,23 @@ class ClienteController(){
     }
 
     @DeleteMapping("cliente/{id}")
-    fun apagarCliente(@PathVariable @Valid id: Int): String {
+    fun apagarCliente(@PathVariable @Valid id: Int): ResponseEntity<String> {
         if(listaClientes.containsKey(id)) {
             var clienteParaRemover = listaClientes[id]
             System.out.println("CLIENTE REMOVIDO: $clienteParaRemover")
             listaClientes.remove(id)
-            return "CLIENTE REMOVIDO: $clienteParaRemover"
+            return status(OK).body("CLIENTE REMOVIDO: $clienteParaRemover")
         }
         else {
             System.out.println("CLIENTE NÃO ENCONTRADO: $id")
-            return "Cliente não encontrado"
+            return status(NOT_FOUND).body("Cliente não encontrado")
         }
     }
 
+    /**
+     * Esse endpoint foi criado para ajudar a realizar os testes facilmente.
+     * Com ele, podemos remover todos os clientes de uma vez.
+     */
     @DeleteMapping("cliente/apagaTodos")
     fun apagarTodosClientes(): String {
         listaClientes.clear()
