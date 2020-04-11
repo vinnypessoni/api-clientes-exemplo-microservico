@@ -30,7 +30,7 @@ class ClienteController(){
     @GetMapping("cliente/{id}")
     fun getClientePorId(@PathVariable @Valid id: Int): ResponseEntity<Any> {
         if(listaClientes.containsKey(id)) {
-            System.out.println("PEGA CLIENTE COM ID: $listaClientes[id]")
+            System.out.println("PEGA CLIENTE COM ID: " + listaClientes[id])
             return status(OK).body(listaClientes[id])
         }
         else {
