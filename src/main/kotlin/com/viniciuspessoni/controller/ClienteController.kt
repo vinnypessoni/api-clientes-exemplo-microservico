@@ -39,6 +39,20 @@ class ClienteController(){
         }
     }
 
+    @GetMapping("risco/{id}")
+    fun getRiscoPorId(@PathVariable @Valid id: Int): ResponseEntity<Any> {
+        if(listaClientes.containsKey(id)) {
+            val cliente = listaClientes[id]
+            cliente!!.calcularRisco()
+            System.out.println("PEGA RISCO DO CLIENTE PELO ID: $cliente")
+            return status(OK).body(cliente)
+        }
+        else {
+            System.out.println("CLIENTE NÃO ENCONTRADO: $id")
+            return status(NOT_FOUND).body("Cliente não encontrado")
+        }
+    }
+
     @PostMapping (path = ["/cliente"], consumes = ["application/json"])
     fun cadastraCliente(@RequestBody @Valid cliente: Cliente): ResponseEntity<MutableMap<Int, Cliente>> {
         listaClientes.put(cliente.id, cliente)
@@ -61,7 +75,7 @@ class ClienteController(){
     }
 
     @DeleteMapping("cliente/{id}")
-    fun apagarCliente(@PathVariable @Valid id: Int): ResponseEntity<String> {
+    fun deletaCliente(@PathVariable @Valid id: Int): ResponseEntity<String> {
         if(listaClientes.containsKey(id)) {
             var clienteParaRemover = listaClientes[id]
             System.out.println("CLIENTE REMOVIDO: $clienteParaRemover")
@@ -79,7 +93,7 @@ class ClienteController(){
      * Com ele, podemos remover todos os clientes de uma vez.
      */
     @DeleteMapping("cliente/apagaTodos")
-    fun apagarTodosClientes(): String {
+    fun deletaTodosClientes(): String {
         listaClientes.clear()
         System.out.println("TODOS CLIENTES REMOVIDOS")
         return listaClientes.toString()

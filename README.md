@@ -32,6 +32,9 @@ A API possui os endpoints:
     /cliente       --> POST cliente para cadastrar um cliente novo. 
     /cliente       --> PUT atualiza cliente já cadastrado previamente. 
     /cliente/{ID}  --> DELETE cliente por ID para deletar um cliente por ID. 
+    /risco/{id}    --> GET cliente por ID com o risco (Basic Authentication)
+    
+        ** OBS: o endpoint RISCO é autenticado com o tipo de autenticação básica (usuário e senha)
     
 Exemplo:
 

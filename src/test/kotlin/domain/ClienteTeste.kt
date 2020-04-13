@@ -4,6 +4,9 @@ import com.viniciuspessoni.domain.Cliente
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
+/**
+ * Testes unitários para a classe de domínio Cliente
+ */
 class ClienteTeste {
 
     @Test
