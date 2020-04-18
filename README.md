@@ -51,6 +51,8 @@ O corpo do método POST é um JSON e deve conter:
                 "idade": 30, 
                  "id": "123456789" 
             }
+            
+Para uma visão completa dos códigos de resposta em cada endpoint, enquanto o seviço estiver sendo executado, veja o SWAGGER no endereço: http://localhost:8080/swagger-ui.html    
 
 Baixe a coleção do POSTMAN que possui os requests (métodos HTTP)  que exercitam essa API a partir do meu site:
 
