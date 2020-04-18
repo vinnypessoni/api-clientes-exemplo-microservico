@@ -2,6 +2,8 @@
 
 Essa é um exemplo de uma API simples para estudo tanto de programação quanto testes automatizdos.
 
+Curso de teste de APIS com Postman, Java, Restassured [disponível aqui](https://viniciuspessoni.com/curso-testando-apis-com-postman-do-zero)
+
 Usei Kotlin e Springboot para programar essa API.
 
 ### Requisitos
