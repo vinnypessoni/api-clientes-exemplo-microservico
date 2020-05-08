@@ -1,8 +1,8 @@
 ## API Exemplo Cliente
 
-Essa é um exemplo de uma API simples para estudo tanto de programação quanto testes automatizdos.
+Essa é um exemplo de uma API (microserviço) para estudo tanto de programação quanto testes automatizados.
 
-Curso de teste de APIS com Postman, Java, Restassured [disponível aqui](https://viniciuspessoni.com/curso-testando-apis-com-postman-do-zero)
+Ela foi criada exclusivamente para o curso de teste de APIS com Postman, Java, Restassured [disponível aqui](https://viniciuspessoni.com/curso-testando-apis-com-postman-do-zero)
 
 Usei Kotlin e Springboot para programar essa API.
 
@@ -24,7 +24,23 @@ Um botão verde (um play) deve aparecer ao lado na linha 9, basta apertar ele.
 A aplicação será iniciada e um servidor estará rodando e acessivel no endereço:
 
         localhost:8080
+        
+        
+Caso não queira usar o IntelliJ para executar o projeto, você pode fazer isso a partir do terminal.
+Abra um terminal, navegue até a pasta raiz do projeto e execute os comandos para Linux ou MacOs:
 
+
+    ./gradlew clean build 
+    ./gradlew bootRun
+
+No Windows devemos executar os mesmos comandos, mas sem o ./ antes.
+
+     gradlew clean build 
+     gradlew bootRun
+
+         
+O primeiro comando irá construir a aplicação e o segundo irá rodar ela no terminal em que você está e será possivel ver os logs das API.           
+         
 ### A API 
 
 A API possui os endpoints:
