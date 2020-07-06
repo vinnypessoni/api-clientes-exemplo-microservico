@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.RequestBody
 import javax.validation.Valid
 import kotlin.collections.HashMap
+import kotlin.random.Random
 
 @RestController
 class ClienteController(){
@@ -55,6 +56,10 @@ class ClienteController(){
 
     @PostMapping (path = ["/cliente"], consumes = ["application/json"])
     fun cadastraCliente(@RequestBody @Valid cliente: Cliente): ResponseEntity<MutableMap<Int, Cliente>> {
+
+        if(cliente.id == 0){
+            cliente.id =  Random.nextInt(0, 9876543)
+        }
         listaClientes.put(cliente.id, cliente)
         System.out.println("CLIENTE ADD: $cliente")
         return status(CREATED).body(listaClientes)
