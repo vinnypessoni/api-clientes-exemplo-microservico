@@ -52,6 +52,7 @@ class IntegracaoTeste {
             .then()
             .statusCode(201)
             .assertThat().body(Matchers.containsString(respostaEsperada))
+
     }
 
     private fun criaUrlComPorta(uri: String): String {
