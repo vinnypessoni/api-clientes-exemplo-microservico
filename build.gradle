@@ -21,6 +21,7 @@ repositories {
 }
 
 dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version" // Required for Kotlin integration
     implementation "org.springframework.boot:spring-boot-starter-web"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
@@ -34,4 +35,10 @@ dependencies {
     implementation "io.springfox:springfox-swagger2:2.7.0"
     implementation "io.springfox:springfox-swagger-ui:2.7.0"
 
+}
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
