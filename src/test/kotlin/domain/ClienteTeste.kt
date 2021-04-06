@@ -21,7 +21,6 @@ class ClienteTeste {
             nome = "James Bond",
             idade = 35,
             id = 1007)
-
         assertThat(clienteEsperado.risco).isEqualTo(clienteObtido.calcularRisco())
     }
 }
