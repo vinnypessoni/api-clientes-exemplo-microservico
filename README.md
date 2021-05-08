@@ -2,7 +2,9 @@
 
 Essa é um exemplo de uma API (microserviço) para estudo tanto de programação quanto testes automatizados.
 
-Ela foi criada exclusivamente para o curso de teste de APIS com Postman, Java, Restassured [disponível aqui](https://viniciuspessoni.com/curso-testando-apis-com-postman-do-zero)
+Ela foi criada para o curso de teste de APIS com Postman, Java, Restassured [disponível aqui](https://viniciuspessoni.com/curso-testando-apis-com-postman-do-zero)
+
+Mesmo sem ter feito o curso, você pode baixar e executar a API pra estudo =)
 
 Usei Kotlin e Springboot para programar essa API.
 
@@ -11,8 +13,6 @@ Usei Kotlin e Springboot para programar essa API.
 Baixe e instale o [INTELIJ](https://www.jetbrains.com/idea/)
 
 Baixe e instale a JDK mais recente [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-
-Coisa adicionada
 
 ### Como rodar esse projeto
 
