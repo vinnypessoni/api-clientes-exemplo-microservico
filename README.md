@@ -42,6 +42,8 @@ No Windows devemos executar os mesmos comandos, mas sem o ./ antes.
 
 O primeiro comando irá construir a aplicação e o segundo irá rodar ela no terminal em que você está e será possivel ver os logs das API.           
 
+Caso não queira clonar e rodar a API do seu próprio computador, você pode usar a versão que está rodando no HEROKU por aqui https://tester-global-cliente-api.herokuapp.com/
+
 ### A API
 
 A API possui os endpoints:
@@ -72,6 +74,9 @@ O corpo do método POST é um JSON e deve conter:
             }
 
 Para uma visão completa dos códigos de resposta em cada endpoint, enquanto o seviço estiver sendo executado, veja o SWAGGER no endereço: http://localhost:8080/swagger-ui.html    
+
+O swagger dela também está disponível no HEROKU pelo link:
+https://tester-global-cliente-api.herokuapp.com/swagger-ui.html#/
 
 Baixe a coleção do POSTMAN que possui os requests (métodos HTTP)  que exercitam essa API a partir do meu site:
 
