@@ -2,7 +2,8 @@ package domain
 
 import com.viniciuspessoni.domain.Cliente
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.Test
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.DisplayName
 
 /**
  * Testes unitários para a classe de domínio Cliente
@@ -10,6 +11,7 @@ import org.junit.Test
 class ClienteTeste {
 
     @Test
+    @DisplayName ("Quando criar o cliente James bond, Então seu risco deve ser calculado corretamente ")
     fun verficaCalculoDeRisco() {
         val clienteEsperado = Cliente(
             nome = "James Bond",
