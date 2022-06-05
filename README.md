@@ -14,7 +14,7 @@ Baixe e instale o [INTELIJ](https://www.jetbrains.com/idea/)
 
 Baixe e instale a JDK mais recente [JDK](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-Coisa Adicionada Teste
+Coisa Adicionada
 
 ### Como rodar esse projeto
 
