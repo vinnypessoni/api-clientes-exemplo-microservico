@@ -89,5 +89,3 @@ Me Segue =}
 💗 [Instagram](https://www.instagram.com/pessonizando)
 
 ⭐ [Telegram](https://t.me/pessonizando)
-
-Ci sono Pessoni 
