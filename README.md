@@ -26,7 +26,7 @@ A aplicação será iniciada e um servidor estará rodando e acessivel no endere
 
         localhost:8080
 
-
+"Você nunca estará SEMPRE MOTIVADO, por isso você deve aprender a ser SEMPRE DISCIPLINADO" - Desconhecido
 Caso não queira usar o IntelliJ para executar o projeto, você pode fazer isso a partir do terminal.
 Abra um terminal, navegue até a pasta raiz do projeto e execute os comandos para Linux ou MacOs:
 
